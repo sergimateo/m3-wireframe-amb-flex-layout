@@ -1,0 +1,286 @@
+html {
+    width: 100vw;
+    background-color: lightyellow;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+    width: 98%;
+    padding-top: 1em;
+}
+/* Cabecera */
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    text-align: center;
+    padding: 1em 1em;
+}
+/* Barra de navegacion de cabecera */
+
+.navbar {
+    display: flex;
+    background-color: lightyellow;
+    padding: 1em 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar div {
+    background-color: lightyellow;
+    color: dimgrey;
+    font-size: 1.5vw;
+    height: 2em;
+}
+
+.navbar .logo {
+    flex-basis: auto;
+    height: 3em;
+}
+
+.navbar .logo img {
+    max-height: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.navbar .menu-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 1em;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menu-bar div {
+    display: flex;
+    vertical-align: middle;
+    padding: 0 0.5em;
+    align-items: center;
+}
+.menu-bar div:hover {
+    color: goldenrod;
+}
+
+.menu-bar p {
+    padding: 10px;
+}
+
+.navbar .social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 10em;
+}
+
+.social-media i {
+    margin: 0 0.7rem;
+}
+
+.social-media i:hover {
+    color: goldenrod;
+}
+
+/* Banner de cabecera */
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    background-image: url("../images/banner-background.jpg");
+    position: relative;
+    height: 0;
+    padding-top: 9.2%;
+    padding-bottom: 9.2%;
+    overflow: visible;
+    object-fit: cover;
+    object-position: center;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.banner-text {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Balsamiq Sans", cursive;
+    color: rgba(184, 156, 197, 0.5);
+    font-weight: bold;
+    font-size: 120%;
+   
+}
+
+/* Seccion principal */
+
+section {
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    padding: 1em 1em;
+    text-align: center;
+}
+
+.news {
+    background-color: #e6e6e6;
+    display: flex;
+    /* width: 64%; */
+    flex-direction: column;
+    flex-basis: 65%;
+    flex-grow: 1;
+    margin-right: 1em;
+    padding: 1em 1em;
+}
+
+.main-news {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.noticia {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.container-news {
+    padding: 1em 1em;
+}
+
+.container-news:hover {
+    background-color: rgb(163, 161, 140);
+}
+
+.img-noticia {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-left: 10px;
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: visible;
+    object-fit: cover;
+    object-position: center;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.img-noticia div {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    
+}
+
+.img-1 {
+    background-image: url("../images/cherry-blossoms-1317308_640.jpg");
+}
+
+.img-2 {
+    background-image: url("../images/food-715542_640.jpg");
+}
+
+.img-3 {
+    background-image: url("../images/japan-4141578_640.jpg");
+}
+
+.img-4 {
+    background-image: url("../images/fuji-1897715_640.jpg");
+}
+
+.titular-noticia {
+    background-color: brown;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #d4d4d4;
+}
+
+.texto-noticia {
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.read-more {
+    padding: 10px 10px;
+    text-align: left;
+    width: fit-content;
+}
+.read-more:hover {
+    color: #e6e6e6;
+}
+
+.horizontal-news {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    padding: 1em auto;
+    color: #d4d4d4;
+    background-color: brown;
+}
+
+.horizontal-news:hover {
+text-decoration: underline;
+color: white;
+
+}
+
+/* Barra lateral */
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    flex-basis: 20%;
+    padding: 0.5em 1em;
+}
+aside div {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #cc4433;
+    margin: 0.5em 0;
+}
+
+/* Pie de pagina */
+
+footer {
+    text-align: center;
+    padding: 1em 1em;
+}
+footer div {
+    height: 4vh;
+}
+/* Media queries */
+
+@media all and (max-width: 800px) {
+    section {
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 1em 1em;
+    }
+    .news {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: column;
+
+        margin-right: 0;
+        margin-bottom: 1em;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 1em;
+    }
+    aside {
+        flex-basis: auto;
+    }
+}
+
+/* Small screens */
+/* @media all and (max-width: 500px) {
+
+    } */

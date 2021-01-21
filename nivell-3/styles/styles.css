@@ -1,0 +1,318 @@
+html {
+    width: 100vw;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    background-color: lightyellow;
+    padding-top: 1em;
+}
+main {
+    margin: auto;
+    display: grid;
+    width: 95%;
+    grid-template-areas:
+        "header"
+        "section"
+        "footer";
+}
+
+header {
+    display: grid;
+    grid-template-areas:
+        "navbar"
+        "banner";
+    grid-area: header;
+    gap: 0.5em;
+    background-color: lightyellow;
+    text-align: center;
+}
+
+.navbar {
+    display: grid;
+    grid-area: navbar;
+    grid-template-areas:
+        "logo"
+        "menu-bar"
+        "social-media";
+    gap: 0.5em;
+
+    background-color: lightyellow;
+}
+
+.navbar div {
+    background-color: lightyellow;
+    color: dimgrey;
+    font-size: 1em;
+}
+
+.navbar .logo {
+    grid-area: logo;
+    height: 4em;
+}
+
+.navbar .logo img {
+    max-height: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.menu-bar {
+    grid-area: menu-bar;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.menu-bar div {
+    margin: auto;
+}
+.menu-bar div:hover {
+    color: goldenrod;
+}
+
+.navbar .social-media {
+    grid-area: social-media;
+    align-items: center;
+}
+
+.social-media i {
+    margin: 0 0.7rem;
+}
+
+.social-media i:hover {
+    color: goldenrod;
+}
+.banner {
+    grid-area: banner;
+    background-image: url("../images/banner-background.jpg");
+    height: 0;
+    padding-top: 9.2%;
+    padding-bottom: 9.2%;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.banner-text {
+    align-items: center;
+    justify-content: center;
+    font-family: "Balsamiq Sans", cursive;
+    color: rgba(184, 156, 197, 0.5);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-areas:
+        "news"
+        "aside";
+
+    justify-content: space-between;
+    margin: 1em 0;
+    padding: 1em 1em;
+    text-align: center;
+}
+
+.news {
+    grid-area: news;
+    display: grid;
+
+    grid-template-areas:
+        "main-news"
+        "horizontal-news";
+    background-color: #e6e6e6;
+    padding: 1em 1em;
+}
+
+.main-news {
+    grid-area: main-news;
+    display: grid;
+    gap: 0.5em;
+}
+
+.noticia {
+    display: grid;
+
+    border: 1px solid;
+    border-color: #8b524a;
+}
+
+.container-news {
+    padding: 0, 5em 1em;
+    background-color: #d8d3d3;
+}
+
+.container-news:hover {
+    background-color: rgb(163, 161, 140);
+}
+/* Paco lo siento pero no me voy a estar a arreglar el pollo de las imagenes
+   para sacar dos display:flex items
+   Lo llevo intentando toda la mañana de hoy jueves */
+.img-noticia {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding-left: 10px;
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: visible;
+    object-fit: cover;
+    object-position: center;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.img-noticia div {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+}
+
+.img-1 {
+    background-image: url("../images/cherry-blossoms-1317308_640.jpg");
+}
+
+.img-2 {
+    background-image: url("../images/food-715542_640.jpg");
+}
+
+.img-3 {
+    background-image: url("../images/japan-4141578_640.jpg");
+}
+
+.img-4 {
+    background-image: url("../images/fuji-1897715_640.jpg");
+}
+
+.titular-noticia {
+    background-color: brown;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #d4d4d4;
+}
+
+.texto-noticia {
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.read-more {
+    padding: 10px 10px;
+    text-align: left;
+    width: fit-content;
+}
+.read-more:hover {
+    color: #e6e6e6;
+}
+
+.horizontal-news {
+    grid-area: horizontal-news;
+    /* width: 100%; */
+    height: auto;
+    margin-top: 1em;
+    padding: 1em auto;
+    color: #d4d4d4;
+    background-color: brown;
+}
+
+.horizontal-news:hover {
+    text-decoration: underline;
+    color: white;
+}
+aside {
+    grid-area: aside;
+    display: grid;
+    background-color: #e6e6e6;
+    padding: 0.5em 1em;
+}
+aside div {
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+    background-color: #8b524a;
+    margin: 0.5em 0;
+    padding: 0.5em 0.5em;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1em 1em;
+}
+footer div {
+    height: 4vh;
+}
+
+/* Media Queries */
+
+/*Tablet*/
+
+@media all and (min-width: 640px) {
+    .navbar {
+        grid-template-areas: "logo menu-bar social-media";
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+    .menu-bar {
+        display: grid;
+        height: 1em;
+        grid-template-columns: auto auto auto auto auto 4fr;
+        gap: 0 10px;
+    }
+
+    .menu-bar div {
+        justify-self: start;
+        height: 0;
+    }
+
+    .banner-text {
+        font-size: 1.2em;
+    }
+
+    .navbar .social-media {
+        grid-area: social-media;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .main-news {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Laptop and Desktop */
+
+@media all and (min-width: 900px) {
+    .menu-bar {
+        margin: 0;
+        align-items: center;
+    }
+
+    .menu-bar div {
+        display: flex;
+        vertical-align: middle;
+        padding: 0 0.5em;
+        align-items: center;
+        height: 100%;
+    }
+
+    .menu-bar p {
+        padding-left: 10px;
+    }
+
+    section {
+        grid-template-areas: "news aside";
+        grid-template-columns: 3fr 1fr;
+    }
+
+    aside {
+        align-content: start;
+    }
+}
